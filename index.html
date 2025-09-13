@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janata Audit Bengaluru</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    
+    <!-- Firebase Configuration -->
+    <script src="firebase-config.js"></script>
+    
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBicdnp4zl2lH1xF06MgU8ReJqwhIrKAfU&libraries=places"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="logo-text">Janata Audit</span>
+                <span class="logo-subtitle">Bengaluru</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#about" class="nav-link">About</a>
+                <button class="login-btn" onclick="showLoginModal()">Sign In</button>
+            </div>
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="map-container">
+                <div id="map"></div>
+                
+                <!-- Filter Panel -->
+                <div class="filter-panel" id="filterPanel">
+                    <div class="filter-header">
+                        <h3>Filters</h3>
+                        <button class="close-btn" onclick="toggleFilterPanel()">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="filter-content">
+                        <div class="filter-group">
+                            <label for="wardFilter">Ward Number</label>
+                            <select id="wardFilter" onchange="applyFilters()">
+                                <option value="">All Wards</option>
+                                <option value="1">Ward 1</option>
+                                <option value="2">Ward 2</option>
+                                <option value="3">Ward 3</option>
+                                <!-- Add more wards as needed -->
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="departmentFilter">Department</label>
+                            <select id="departmentFilter" onchange="applyFilters()">
+                                <option value="">All Departments</option>
+                                <option value="BBMP">BBMP</option>
+                                <option value="BDA">BDA</option>
+                                <option value="BMRCL">BMRCL</option>
+                                <option value="BWSSB">BWSSB</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="statusFilter">Status</label>
+                            <select id="statusFilter" onchange="applyFilters()">
+                                <option value="">All Status</option>
+                                <option value="Completed">Completed</option>
+                                <option value="In Progress">In Progress</option>
+                                <option value="Pending">Pending</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filter Toggle Button -->
+                <button class="filter-toggle-btn" onclick="toggleFilterPanel()">
+                    <i class="fas fa-filter"></i>
+                    <span>Filters</span>
+                </button>
+
+                <!-- Project List -->
+                <div class="project-list" id="projectList">
+                    <div class="project-list-header">
+                        <h3>Projects (<span id="projectCount">0</span>)</h3>
+                    </div>
+                    <div class="project-list-content" id="projectListContent">
+                        <!-- Projects will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2>All Projects</h2>
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Projects will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About Janata Audit Bengaluru</h2>
+                <div class="about-content">
+                    <p>Janata Audit Bengaluru is an AI-powered civic accountability platform for tracking local government infrastructure projects, public funds, and political donations in Bengaluru.</p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <h3>Project Tracking</h3>
+                            <p>Monitor infrastructure projects across Bengaluru with real-time updates</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-robot"></i>
+                            <h3>AI Analysis</h3>
+                            <p>Automated anomaly detection and delay prediction using machine learning</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <h3>Crowdsourced Feedback</h3>
+                            <p>Citizen input and photo submissions for better project monitoring</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Sign In</h2>
+                <button class="close-btn" onclick="hideLoginModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm" onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="tel" id="phoneNumber" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pincode">Pincode</label>
+                        <input type="text" id="pincode" placeholder="Enter your pincode" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ward">BBMP Ward</label>
+                        <select id="ward" required>
+                            <option value="">Select your ward</option>
+                            <option value="Ward 1">Ward 1</option>
+                            <option value="Ward 2">Ward 2</option>
+                            <!-- Add more wards -->
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn">Sign In</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Detail Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="projectModalTitle">Project Details</h2>
+                <button class="close-btn" onclick="hideProjectModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="projectModalBody">
+                <!-- Project details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner">
+        <div class="spinner"></div>
+        <p>Loading projects...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

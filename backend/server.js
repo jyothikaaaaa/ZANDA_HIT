@@ -25,16 +25,17 @@ try {
   console.log('Please set FIREBASE_SERVICE_ACCOUNT_KEY environment variable or add serviceAccountKey.json file');
 }
 
+let db;
 if (serviceAccount) {
   admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    databaseURL: process.env.FIREBASE_DATABASE_URL || "https://janata-audit-bengaluru.firebaseio.com"
+    databaseURL: process.env.FIREBASE_DATABASE_URL || "https://jannat-audit.firebaseio.com"
   });
+  db = admin.firestore();
+  console.log('🔥 Firebase Admin initialized successfully');
 } else {
   console.warn('Firebase Admin not initialized - API will not work without proper configuration');
 }
-
-const db = admin.firestore();
 
 // API Routes
 

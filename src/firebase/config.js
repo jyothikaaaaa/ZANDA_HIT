@@ -5,14 +5,14 @@ import { getFunctions } from 'firebase/functions';
 
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID
+  apiKey: "AIzaSyARzOykm2wdokL7qakHUe1UI8Vz7nVZFX8",
+  authDomain: "junta-d7181.firebaseapp.com",
+  projectId: "junta-d7181",
+  storageBucket: "junta-d7181.appspot.com",
+  messagingSenderId: "939701147722",
+  appId: "1:939701147722:web:cb8669135147873302aeb3",
+  measurementId: "G-PZZN3RZ7G5"
 };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
