@@ -6,17 +6,17 @@
     "budget": 25000000,
     "status": "Pending",
     "location": "Bengaluru, Karnataka",
-    "startDate": "2025-05-04T07:32:09.813355",
-    "endDate": "2026-08-29T07:32:09.814354",
+    "startDate": "2024-11-16T12:31:13.047697",
+    "endDate": "2026-01-18T12:31:13.047697",
     "source": "Karnataka e-Procurement",
     "sourceUrl": "https://eproc.karnataka.gov.in/",
-    "scrapedAt": "2025-09-14T07:32:09.814354",
+    "scrapedAt": "2025-09-14T12:31:13.047697",
     "department": "BBMP",
-    "wardNumber": 16,
+    "wardNumber": 19,
     "contractor": null,
     "geoPoint": {
-      "latitude": 13.05324,
-      "longitude": 77.670051
+      "latitude": 13.128644,
+      "longitude": 77.783754
     }
   },
   {
@@ -26,17 +26,17 @@
     "budget": 75000000,
     "status": "In Progress",
     "location": "Bengaluru, Karnataka",
-    "startDate": "2024-11-15T07:32:09.814354",
-    "endDate": "2026-09-08T07:32:09.814354",
+    "startDate": "2025-01-27T12:31:13.047697",
+    "endDate": "2025-11-28T12:31:13.047697",
     "source": "Karnataka e-Procurement",
     "sourceUrl": "https://eproc.karnataka.gov.in/",
-    "scrapedAt": "2025-09-14T07:32:09.814354",
+    "scrapedAt": "2025-09-14T12:31:13.047697",
     "department": "BDA",
-    "wardNumber": 28,
+    "wardNumber": 14,
     "contractor": null,
     "geoPoint": {
-      "latitude": 13.028303,
-      "longitude": 77.717267
+      "latitude": 13.173375,
+      "longitude": 77.581883
     }
   },
   {
@@ -46,17 +46,17 @@
     "budget": 40000000,
     "status": "Pending",
     "location": "Bengaluru, Karnataka",
-    "startDate": "2025-03-26T07:32:09.814354",
-    "endDate": "2026-01-08T07:32:09.814354",
+    "startDate": "2024-11-19T12:31:13.047697",
+    "endDate": "2025-12-08T12:31:13.047697",
     "source": "Karnataka e-Procurement",
     "sourceUrl": "https://eproc.karnataka.gov.in/",
-    "scrapedAt": "2025-09-14T07:32:09.814354",
+    "scrapedAt": "2025-09-14T12:31:13.047697",
     "department": "BWSSB",
-    "wardNumber": 9,
+    "wardNumber": 7,
     "contractor": null,
     "geoPoint": {
-      "latitude": 13.155352,
-      "longitude": 77.792465
+      "latitude": 12.907587,
+      "longitude": 77.466969
     }
   },
   {
@@ -66,17 +66,17 @@
     "budget": 120000000,
     "status": "In Progress",
     "location": "Bengaluru, Karnataka",
-    "startDate": "2025-01-07T07:32:09.814354",
-    "endDate": "2026-06-21T07:32:09.814354",
+    "startDate": "2024-09-20T12:31:13.047697",
+    "endDate": "2025-12-10T12:31:13.047697",
     "source": "Karnataka e-Procurement",
     "sourceUrl": "https://eproc.karnataka.gov.in/",
-    "scrapedAt": "2025-09-14T07:32:09.814354",
+    "scrapedAt": "2025-09-14T12:31:13.047697",
     "department": "BMRCL",
-    "wardNumber": 2,
+    "wardNumber": 4,
     "contractor": null,
     "geoPoint": {
-      "latitude": 13.000387,
-      "longitude": 77.731521
+      "latitude": 13.143478,
+      "longitude": 77.544576
     }
   },
   {
@@ -86,17 +86,17 @@
     "budget": 35000000,
     "status": "Pending",
     "location": "Bengaluru, Karnataka",
-    "startDate": "2025-05-18T07:32:09.814354",
-    "endDate": "2026-02-12T07:32:09.814354",
+    "startDate": "2025-03-09T12:31:13.047697",
+    "endDate": "2026-06-07T12:31:13.047697",
     "source": "Karnataka e-Procurement",
     "sourceUrl": "https://eproc.karnataka.gov.in/",
-    "scrapedAt": "2025-09-14T07:32:09.814354",
+    "scrapedAt": "2025-09-14T12:31:13.047697",
     "department": "BESCOM",
-    "wardNumber": 12,
+    "wardNumber": 22,
     "contractor": null,
     "geoPoint": {
-      "latitude": 13.114513,
-      "longitude": 77.479865
+      "latitude": 12.973878,
+      "longitude": 77.776274
     }
   },
   {
@@ -106,17 +106,17 @@
     "budget": 15000000,
     "status": "In Progress",
     "location": "Bengaluru, Karnataka",
-    "startDate": "2025-05-02T07:32:11.247258",
-    "endDate": "2026-04-23T07:32:11.247258",
+    "startDate": "2024-11-02T12:31:15.409790",
+    "endDate": "2025-11-02T12:31:15.409790",
     "source": "BBMP",
     "sourceUrl": "https://bbmp.gov.in/",
-    "scrapedAt": "2025-09-14T07:32:11.247258",
+    "scrapedAt": "2025-09-14T12:31:15.409790",
     "department": "BBMP",
     "wardNumber": 15,
-    "contractor": "Water Works Ltd.",
+    "contractor": "City Builders Pvt Ltd.",
     "geoPoint": {
-      "latitude": 12.982502,
-      "longitude": 77.730809
+      "latitude": 13.169616,
+      "longitude": 77.66533
     }
   },
   {
@@ -126,17 +126,17 @@
     "budget": 30000000,
     "status": "Pending",
     "location": "Bengaluru, Karnataka",
-    "startDate": "2025-02-27T07:32:11.247258",
-    "endDate": "2026-05-15T07:32:11.247258",
+    "startDate": "2024-10-13T12:31:15.409790",
+    "endDate": "2026-03-09T12:31:15.409790",
     "source": "BBMP",
     "sourceUrl": "https://bbmp.gov.in/",
-    "scrapedAt": "2025-09-14T07:32:11.247258",
+    "scrapedAt": "2025-09-14T12:31:15.409790",
     "department": "BBMP",
-    "wardNumber": 24,
-    "contractor": "Urban Development Corp.",
+    "wardNumber": 22,
+    "contractor": "XYZ Builders",
     "geoPoint": {
-      "latitude": 13.017503,
-      "longitude": 77.737015
+      "latitude": 12.852615,
+      "longitude": 77.791279
     }
   },
   {
@@ -146,17 +146,17 @@
     "budget": 8000000,
     "status": "Completed",
     "location": "Bengaluru, Karnataka",
-    "startDate": "2025-04-16T07:32:11.247258",
-    "endDate": "2026-05-05T07:32:11.247258",
+    "startDate": "2025-06-25T12:31:15.409790",
+    "endDate": "2025-11-08T12:31:15.409790",
     "source": "BBMP",
     "sourceUrl": "https://bbmp.gov.in/",
-    "scrapedAt": "2025-09-14T07:32:11.247258",
+    "scrapedAt": "2025-09-14T12:31:15.409790",
     "department": "BBMP",
-    "wardNumber": 15,
+    "wardNumber": 22,
     "contractor": "Bridge Builders Ltd.",
     "geoPoint": {
-      "latitude": 13.060067,
-      "longitude": 77.449875
+      "latitude": 13.109356,
+      "longitude": 77.54137
     }
   },
   {
@@ -166,17 +166,17 @@
     "budget": 12000000,
     "status": "In Progress",
     "location": "Bengaluru, Karnataka",
-    "startDate": "2025-07-24T07:32:11.247258",
-    "endDate": "2026-03-11T07:32:11.247258",
+    "startDate": "2025-06-02T12:31:15.409790",
+    "endDate": "2025-12-15T12:31:15.409790",
     "source": "BBMP",
     "sourceUrl": "https://bbmp.gov.in/",
-    "scrapedAt": "2025-09-14T07:32:11.247258",
+    "scrapedAt": "2025-09-14T12:31:15.409790",
     "department": "BBMP",
-    "wardNumber": 21,
-    "contractor": "City Builders Pvt Ltd.",
+    "wardNumber": 18,
+    "contractor": "Metro Rail Contractors",
     "geoPoint": {
-      "latitude": 13.096446,
-      "longitude": 77.66242
+      "latitude": 13.102902,
+      "longitude": 77.754774
     }
   },
   {
@@ -186,57 +186,57 @@
     "budget": 45000000,
     "status": "Pending",
     "location": "Bengaluru, Karnataka",
-    "startDate": "2025-07-23T07:32:11.247258",
-    "endDate": "2026-04-08T07:32:11.247258",
+    "startDate": "2025-04-05T12:31:15.409790",
+    "endDate": "2026-04-04T12:31:15.409790",
     "source": "BBMP",
     "sourceUrl": "https://bbmp.gov.in/",
-    "scrapedAt": "2025-09-14T07:32:11.247258",
+    "scrapedAt": "2025-09-14T12:31:15.409790",
     "department": "BBMP",
-    "wardNumber": 2,
-    "contractor": "Metro Rail Contractors",
+    "wardNumber": 4,
+    "contractor": "Bridge Builders Ltd.",
     "geoPoint": {
-      "latitude": 12.906197,
-      "longitude": 77.787041
+      "latitude": 13.154472,
+      "longitude": 77.515086
     }
   },
   {
-    "id": "BDA_8127285712701612158",
+    "id": "BDA_-9106442757297556819",
     "projectName": "Housing (Flats &\r\n                        villas)",
-    "description": "HOUSING PROJECT AT SY.NO.95 OF KANIMINIKE VILLAGE, KENGERI HOBLI, BANGALORE SOUTH",
-    "budget": 250000000,
-    "status": "Pending",
-    "location": "1 KM FROM MYSORE ROAD",
-    "startDate": "2024-10-04T07:32:15.688858",
-    "endDate": "2025-11-20T07:32:15.688858",
-    "source": "BDA",
-    "sourceUrl": "https://housing.bdabangalore.org/",
-    "scrapedAt": "2025-09-14T07:32:15.688858",
-    "department": "BDA",
-    "wardNumber": 27,
-    "contractor": "ABC Construction Ltd.",
-    "geoPoint": {
-      "latitude": 12.958106,
-      "longitude": 77.553971
-    }
-  },
-  {
-    "id": "BDA_8127285712701612158",
-    "projectName": "Housing (Flats &\r\n                          villas)",
     "description": "HOUSING PROJECT AT SY.NO.95 OF KANIMINIKE VILLAGE, KENGERI HOBLI, BANGALORE SOUTH",
     "budget": 250000000,
     "status": "In Progress",
     "location": "1 KM FROM MYSORE ROAD",
-    "startDate": "2024-12-13T07:32:17.817313",
-    "endDate": "2026-04-22T07:32:17.818797",
+    "startDate": "2024-12-11T12:31:21.593872",
+    "endDate": "2026-07-08T12:31:21.595867",
     "source": "BDA",
     "sourceUrl": "https://housing.bdabangalore.org/",
-    "scrapedAt": "2025-09-14T07:32:17.818797",
+    "scrapedAt": "2025-09-14T12:31:21.595867",
     "department": "BDA",
-    "wardNumber": 17,
-    "contractor": "Metro Construction Co.",
+    "wardNumber": 19,
+    "contractor": "Metro Rail Contractors",
     "geoPoint": {
-      "latitude": 13.196878,
-      "longitude": 77.523956
+      "latitude": 13.034422,
+      "longitude": 77.448393
+    }
+  },
+  {
+    "id": "BDA_-9106442757297556819",
+    "projectName": "Housing (Flats &\r\n                          villas)",
+    "description": "HOUSING PROJECT AT SY.NO.95 OF KANIMINIKE VILLAGE, KENGERI HOBLI, BANGALORE SOUTH",
+    "budget": 250000000,
+    "status": "Completed",
+    "location": "1 KM FROM MYSORE ROAD",
+    "startDate": "2024-11-14T12:31:23.778382",
+    "endDate": "2026-02-05T12:31:23.778382",
+    "source": "BDA",
+    "sourceUrl": "https://housing.bdabangalore.org/",
+    "scrapedAt": "2025-09-14T12:31:23.778382",
+    "department": "BDA",
+    "wardNumber": 3,
+    "contractor": "Bengaluru Infrastructure Ltd.",
+    "geoPoint": {
+      "latitude": 13.072525,
+      "longitude": 77.660294
     }
   },
   {
@@ -246,17 +246,17 @@
     "budget": 85000000,
     "status": "In Progress",
     "location": "Bengaluru, Karnataka",
-    "startDate": "2025-06-16T07:33:24.127946",
-    "endDate": "2026-06-29T07:33:24.127946",
+    "startDate": "2025-02-28T12:32:25.527969",
+    "endDate": "2026-01-15T12:32:25.527969",
     "source": "BDA",
     "sourceUrl": "https://bdabangalore.org/",
-    "scrapedAt": "2025-09-14T07:33:24.127946",
+    "scrapedAt": "2025-09-14T12:32:25.527969",
     "department": "BDA",
-    "wardNumber": 29,
-    "contractor": "Power Solutions Inc.",
+    "wardNumber": 18,
+    "contractor": "City Builders Pvt Ltd.",
     "geoPoint": {
-      "latitude": 13.109392,
-      "longitude": 77.429246
+      "latitude": 13.012877,
+      "longitude": 77.758518
     }
   },
   {
@@ -266,17 +266,17 @@
     "budget": 120000000,
     "status": "Pending",
     "location": "Bengaluru, Karnataka",
-    "startDate": "2025-02-19T07:33:24.127946",
-    "endDate": "2026-04-04T07:33:24.127946",
+    "startDate": "2024-10-09T12:32:25.527969",
+    "endDate": "2026-08-21T12:32:25.527969",
     "source": "BDA",
     "sourceUrl": "https://bdabangalore.org/",
-    "scrapedAt": "2025-09-14T07:33:24.127946",
+    "scrapedAt": "2025-09-14T12:32:25.527969",
     "department": "BDA",
-    "wardNumber": 15,
-    "contractor": "Infrastructure Solutions Inc.",
+    "wardNumber": 25,
+    "contractor": "Bengaluru Infrastructure Ltd.",
     "geoPoint": {
-      "latitude": 13.060031,
-      "longitude": 77.550477
+      "latitude": 12.840273,
+      "longitude": 77.478114
     }
   },
   {
@@ -286,17 +286,17 @@
     "budget": 65000000,
     "status": "In Progress",
     "location": "Bengaluru, Karnataka",
-    "startDate": "2024-10-01T07:33:24.127946",
-    "endDate": "2026-07-06T07:33:24.127946",
+    "startDate": "2025-03-29T12:32:25.527969",
+    "endDate": "2026-07-30T12:32:25.527969",
     "source": "BWSSB",
     "sourceUrl": "https://bwssb.karnataka.gov.in/",
-    "scrapedAt": "2025-09-14T07:33:24.127946",
+    "scrapedAt": "2025-09-14T12:32:25.527969",
     "department": "BWSSB",
-    "wardNumber": 9,
-    "contractor": "Urban Development Corp.",
+    "wardNumber": 26,
+    "contractor": "Power Solutions Inc.",
     "geoPoint": {
-      "latitude": 13.129811,
-      "longitude": 77.686454
+      "latitude": 12.89376,
+      "longitude": 77.485827
     }
   },
   {
@@ -306,17 +306,17 @@
     "budget": 40000000,
     "status": "Pending",
     "location": "Bengaluru, Karnataka",
-    "startDate": "2025-05-11T07:33:24.127946",
-    "endDate": "2025-11-03T07:33:24.127946",
+    "startDate": "2025-06-19T12:32:25.527969",
+    "endDate": "2025-11-21T12:32:25.527969",
     "source": "BWSSB",
     "sourceUrl": "https://bwssb.karnataka.gov.in/",
-    "scrapedAt": "2025-09-14T07:33:24.127946",
+    "scrapedAt": "2025-09-14T12:32:25.527969",
     "department": "BWSSB",
-    "wardNumber": 25,
-    "contractor": "City Builders Pvt Ltd.",
+    "wardNumber": 17,
+    "contractor": "Bengaluru Infrastructure Ltd.",
     "geoPoint": {
-      "latitude": 13.078321,
-      "longitude": 77.465734
+      "latitude": 13.064617,
+      "longitude": 77.710036
     }
   },
   {
@@ -326,17 +326,17 @@
     "budget": 250000000,
     "status": "In Progress",
     "location": "Bengaluru, Karnataka",
-    "startDate": "2025-03-09T07:33:24.127946",
-    "endDate": "2026-06-16T07:33:24.127946",
+    "startDate": "2025-05-18T12:32:25.527969",
+    "endDate": "2026-05-20T12:32:25.527969",
     "source": "BMRCL",
     "sourceUrl": "https://english.bmrc.co.in/",
-    "scrapedAt": "2025-09-14T07:33:24.127946",
+    "scrapedAt": "2025-09-14T12:32:25.527969",
     "department": "BMRCL",
-    "wardNumber": 30,
-    "contractor": "XYZ Builders",
+    "wardNumber": 18,
+    "contractor": "Metro Construction Co.",
     "geoPoint": {
-      "latitude": 13.030609,
-      "longitude": 77.50029
+      "latitude": 12.803396,
+      "longitude": 77.531883
     }
   },
   {
@@ -346,17 +346,17 @@
     "budget": 180000000,
     "status": "Pending",
     "location": "Bengaluru, Karnataka",
-    "startDate": "2025-06-28T07:33:24.127946",
-    "endDate": "2025-11-20T07:33:24.127946",
+    "startDate": "2025-05-19T12:32:25.527969",
+    "endDate": "2026-01-26T12:32:25.527969",
     "source": "BMRCL",
     "sourceUrl": "https://english.bmrc.co.in/",
-    "scrapedAt": "2025-09-14T07:33:24.127946",
+    "scrapedAt": "2025-09-14T12:32:25.527969",
     "department": "BMRCL",
-    "wardNumber": 19,
-    "contractor": "Infrastructure Solutions Inc.",
+    "wardNumber": 26,
+    "contractor": "Public Works Contractors",
     "geoPoint": {
-      "latitude": 13.057122,
-      "longitude": 77.466905
+      "latitude": 12.933446,
+      "longitude": 77.661911
     }
   },
   {
@@ -366,17 +366,17 @@
     "budget": 75000000,
     "status": "In Progress",
     "location": "Bengaluru, Karnataka",
-    "startDate": "2024-09-26T07:33:24.127946",
-    "endDate": "2026-02-21T07:33:24.127946",
+    "startDate": "2025-04-23T12:32:25.527969",
+    "endDate": "2025-12-08T12:32:25.527969",
     "source": "BESCOM",
     "sourceUrl": "https://bescom.karnataka.gov.in/",
-    "scrapedAt": "2025-09-14T07:33:24.127946",
+    "scrapedAt": "2025-09-14T12:32:25.527969",
     "department": "BESCOM",
-    "wardNumber": 7,
-    "contractor": "Metro Construction Co.",
+    "wardNumber": 14,
+    "contractor": "Bridge Builders Ltd.",
     "geoPoint": {
-      "latitude": 13.07132,
-      "longitude": 77.483046
+      "latitude": 13.034361,
+      "longitude": 77.75352
     }
   },
   {
@@ -386,17 +386,17 @@
     "budget": 35000000,
     "status": "Pending",
     "location": "Bengaluru, Karnataka",
-    "startDate": "2025-03-16T07:33:24.127946",
-    "endDate": "2026-04-23T07:33:24.127946",
+    "startDate": "2025-05-05T12:32:25.527969",
+    "endDate": "2026-01-28T12:32:25.527969",
     "source": "BESCOM",
     "sourceUrl": "https://bescom.karnataka.gov.in/",
-    "scrapedAt": "2025-09-14T07:33:24.127946",
+    "scrapedAt": "2025-09-14T12:32:25.527969",
     "department": "BESCOM",
-    "wardNumber": 3,
-    "contractor": "Infrastructure Solutions Inc.",
+    "wardNumber": 13,
+    "contractor": "Bridge Builders Ltd.",
     "geoPoint": {
-      "latitude": 13.019107,
-      "longitude": 77.770602
+      "latitude": 13.093617,
+      "longitude": 77.741746
     }
   },
   {
@@ -406,17 +406,17 @@
     "budget": 150000000,
     "status": "In Progress",
     "location": "Bengaluru, Karnataka",
-    "startDate": "2024-12-13T07:33:24.127946",
-    "endDate": "2026-04-10T07:33:24.127946",
+    "startDate": "2025-07-08T12:32:25.527969",
+    "endDate": "2026-02-22T12:32:25.527969",
     "source": "KPWD",
     "sourceUrl": "https://kpwd.karnataka.gov.in/",
-    "scrapedAt": "2025-09-14T07:33:24.127946",
+    "scrapedAt": "2025-09-14T12:32:25.527969",
     "department": "KPWD",
-    "wardNumber": 21,
-    "contractor": "Metro Rail Contractors",
+    "wardNumber": 4,
+    "contractor": "Urban Development Corp.",
     "geoPoint": {
-      "latitude": 12.976753,
-      "longitude": 77.600448
+      "latitude": 12.95922,
+      "longitude": 77.693832
     }
   },
   {
@@ -426,17 +426,17 @@
     "budget": 60000000,
     "status": "Pending",
     "location": "Bengaluru, Karnataka",
-    "startDate": "2024-11-09T07:33:24.127946",
-    "endDate": "2026-03-17T07:33:24.127946",
+    "startDate": "2024-09-15T12:32:25.527969",
+    "endDate": "2026-02-07T12:32:25.527969",
     "source": "KPWD",
     "sourceUrl": "https://kpwd.karnataka.gov.in/",
-    "scrapedAt": "2025-09-14T07:33:24.127946",
+    "scrapedAt": "2025-09-14T12:32:25.527969",
     "department": "KPWD",
-    "wardNumber": 27,
-    "contractor": "Urban Development Corp.",
+    "wardNumber": 2,
+    "contractor": "Metro Construction Co.",
     "geoPoint": {
-      "latitude": 13.185976,
-      "longitude": 77.532936
+      "latitude": 12.83104,
+      "longitude": 77.669914
     }
   },
   {
@@ -446,17 +446,17 @@
     "budget": 200000000,
     "status": "In Progress",
     "location": "Bengaluru, Karnataka",
-    "startDate": "2025-01-19T07:33:24.127946",
-    "endDate": "2026-03-01T07:33:24.127946",
+    "startDate": "2025-02-14T12:32:25.527969",
+    "endDate": "2026-02-14T12:32:25.527969",
     "source": "KUIDFC",
     "sourceUrl": "https://kuidfc.karnataka.gov.in/",
-    "scrapedAt": "2025-09-14T07:33:24.127946",
+    "scrapedAt": "2025-09-14T12:32:25.527969",
     "department": "KUIDFC",
     "wardNumber": 4,
-    "contractor": "Metro Construction Co.",
+    "contractor": "Water Supply Engineers",
     "geoPoint": {
-      "latitude": 12.847573,
-      "longitude": 77.722739
+      "latitude": 12.975555,
+      "longitude": 77.675403
     }
   },
   {
@@ -466,17 +466,17 @@
     "budget": 90000000,
     "status": "Pending",
     "location": "Bengaluru, Karnataka",
-    "startDate": "2025-02-24T07:33:24.127946",
-    "endDate": "2026-03-03T07:33:24.127946",
+    "startDate": "2025-07-03T12:32:25.527969",
+    "endDate": "2026-09-07T12:32:25.527969",
     "source": "KUIDFC",
     "sourceUrl": "https://kuidfc.karnataka.gov.in/",
-    "scrapedAt": "2025-09-14T07:33:24.127946",
+    "scrapedAt": "2025-09-14T12:32:25.527969",
     "department": "KUIDFC",
-    "wardNumber": 8,
-    "contractor": "Karnataka Development Corp.",
+    "wardNumber": 10,
+    "contractor": "Urban Development Corp.",
     "geoPoint": {
-      "latitude": 13.121229,
-      "longitude": 77.444854
+      "latitude": 12.912222,
+      "longitude": 77.727291
     }
   },
   {
@@ -486,17 +486,17 @@
     "budget": 80000000,
     "status": "In Progress",
     "location": "Bengaluru, Karnataka",
-    "startDate": "2025-03-25T07:33:24.127946",
-    "endDate": "2026-02-22T07:33:24.127946",
+    "startDate": "2025-01-11T12:32:25.527969",
+    "endDate": "2026-07-02T12:32:25.527969",
     "source": "BMTC",
     "sourceUrl": "https://mybmtc.karnataka.gov.in/",
-    "scrapedAt": "2025-09-14T07:33:24.127946",
+    "scrapedAt": "2025-09-14T12:32:25.527969",
     "department": "BMTC",
-    "wardNumber": 9,
-    "contractor": "XYZ Builders",
+    "wardNumber": 5,
+    "contractor": "Infrastructure Solutions Inc.",
     "geoPoint": {
-      "latitude": 12.988471,
-      "longitude": 77.472271
+      "latitude": 13.036785,
+      "longitude": 77.718133
     }
   },
   {
@@ -506,17 +506,17 @@
     "budget": 25000000,
     "status": "Pending",
     "location": "Bengaluru, Karnataka",
-    "startDate": "2025-03-28T07:33:24.127946",
-    "endDate": "2026-08-30T07:33:24.127946",
+    "startDate": "2024-11-25T12:32:25.527969",
+    "endDate": "2026-02-10T12:32:25.527969",
     "source": "BMTC",
     "sourceUrl": "https://mybmtc.karnataka.gov.in/",
-    "scrapedAt": "2025-09-14T07:33:24.127946",
+    "scrapedAt": "2025-09-14T12:32:25.527969",
     "department": "BMTC",
-    "wardNumber": 22,
-    "contractor": "Bengaluru Infrastructure Ltd.",
+    "wardNumber": 3,
+    "contractor": "City Builders Pvt Ltd.",
     "geoPoint": {
-      "latitude": 12.987914,
-      "longitude": 77.408493
+      "latitude": 12.942322,
+      "longitude": 77.780495
     }
   }
 ]
