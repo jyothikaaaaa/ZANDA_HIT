@@ -4,7 +4,8 @@ import { AuthProvider } from './contexts/AuthContext';
 import { ProjectProvider } from './contexts/ProjectContext';
 import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
-import ProjectDetail from './pages/ProjectDetail';
+import ProjectDetailPage from './components/ProjectDetailPage';
+import ProjectTrackingPage from './pages/ProjectTrackingPage';
 import Login from './pages/Login';
 import './App.css';
 
@@ -17,7 +18,8 @@ function App() {
             <Navbar />
             <Routes>
               <Route path="/" element={<HomePage />} />
-              <Route path="/project/:id" element={<ProjectDetail />} />
+              <Route path="/projects" element={<ProjectTrackingPage />} />
+              <Route path="/project/:id" element={<ProjectDetailPage />} />
               <Route path="/login" element={<Login />} />
             </Routes>
           </div>

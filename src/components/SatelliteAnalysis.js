@@ -10,6 +10,7 @@ import {
   Clock,
   BarChart3
 } from 'lucide-react';
+import OpenStreetMapView from './OpenStreetMapView';
 
 const SatelliteAnalysis = ({ projectId, projectData }) => {
   const [analysis, setAnalysis] = useState(null);
@@ -211,6 +212,11 @@ const SatelliteAnalysis = ({ projectId, projectData }) => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* OpenStreetMap Integration */}
+      <div className="mb-6">
+        <OpenStreetMapView center={[12.9716, 77.5946]} zoom={13} />
       </div>
 
       {/* Mismatch Alert */}

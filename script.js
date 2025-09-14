@@ -128,34 +128,13 @@ function checkExistingUser() {
 }
 
 function initializeMap() {
-    // Check if Google Maps is available
-    if (typeof google === 'undefined' || !google.maps) {
-        showMapError();
-        return;
-    }
-    
-    // Default center for Bengaluru
-    const bengaluru = { lat: 12.9716, lng: 77.5946 };
-    
-    try {
-        map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 12,
-            center: bengaluru,
-            styles: [
-                {
-                    featureType: 'poi',
-                    elementType: 'labels',
-                    stylers: [{ visibility: 'off' }]
-                }
-            ]
-        });
-        
-        // Add markers for projects
-        addProjectMarkers();
-    } catch (error) {
-        console.error('Error initializing map:', error);
-        showMapError();
-    }
+    // OpenStreetMap with Leaflet
+    const bengaluru = [12.9716, 77.5946];
+    map = L.map('map').setView(bengaluru, 12);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    addProjectMarkers();
 }
 
 function showMapError() {
@@ -195,40 +174,14 @@ function showMapError() {
 }
 
 function addProjectMarkers() {
-    // Check if map is available
-    if (!map || typeof google === 'undefined' || !google.maps) {
-        return;
-    }
-    
     // Clear existing markers
-    markers.forEach(marker => marker.setMap(null));
+    if (markers && markers.length) {
+        markers.forEach(marker => map.removeLayer(marker));
+    }
     markers = [];
-    
     filteredProjects.forEach(project => {
-        const marker = new google.maps.Marker({
-            position: project.location,
-            map: map,
-            title: project.projectName,
-            icon: {
-                url: `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(`
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12" cy="12" r="10" fill="${getMarkerColor(project.status)}" stroke="white" stroke-width="2"/>
-                        <circle cx="12" cy="12" r="4" fill="white"/>
-                    </svg>
-                `)}`,
-                scaledSize: new google.maps.Size(24, 24),
-                anchor: new google.maps.Point(12, 12)
-            }
-        });
-        
-        const infoWindow = new google.maps.InfoWindow({
-            content: createInfoWindowContent(project)
-        });
-        
-        marker.addListener('click', () => {
-            infoWindow.open(map, marker);
-        });
-        
+        const marker = L.marker([project.location.lat, project.location.lng]).addTo(map);
+        marker.bindPopup(createInfoWindowContent(project));
         markers.push(marker);
     });
 }
@@ -496,8 +449,7 @@ function hideProjectModal() {
 function viewOnMap(projectId) {
     const project = projects.find(p => p.id == projectId);
     if (project && map) {
-        map.setCenter(project.location);
-        map.setZoom(15);
+        map.setView([project.location.lat, project.location.lng], 15);
         hideProjectModal();
     }
 }

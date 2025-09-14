@@ -9,3 +9,8 @@ python-dotenv==1.0.0
 webdriver-manager==4.0.1
 lxml==4.9.3
 earthengine-api==0.1.364
+opencv-python==4.8.1.78
+Pillow==10.0.1
+numpy==1.24.3
+matplotlib==3.7.2
+seaborn==0.12.2

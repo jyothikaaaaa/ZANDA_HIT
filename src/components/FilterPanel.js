@@ -1,7 +1,7 @@
-import React from 'react';
-import { X, MapPin, Building, DollarSign } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { X, MapPin, Building, DollarSign, Search, Calendar, Filter } from 'lucide-react';
 
-const FilterPanel = ({ filters, onFiltersChange, onClose }) => {
+const FilterPanel = ({ filters, onFiltersChange, projects = [] }) => {
   const bengaluruWards = [
     'Ward 1', 'Ward 2', 'Ward 3', 'Ward 4', 'Ward 5', 'Ward 6', 'Ward 7', 'Ward 8',
     'Ward 9', 'Ward 10', 'Ward 11', 'Ward 12', 'Ward 13', 'Ward 14', 'Ward 15', 'Ward 16',
@@ -30,60 +30,88 @@ const FilterPanel = ({ filters, onFiltersChange, onClose }) => {
     'Ward 193', 'Ward 194', 'Ward 195', 'Ward 196', 'Ward 197', 'Ward 198', 'Ward 199', 'Ward 200'
   ];
 
-  const departments = [
-    'BBMP', 'BDA', 'BMRCL', 'BWSSB', 'BESCOM', 'KUIDFC', 'BMTC', 'PWD', 'Karnataka Government'
-  ];
-
-  const statuses = ['Completed', 'In Progress', 'Pending', 'Cancelled'];
+  const [departments, setDepartments] = useState([]);
+  const [statuses, setStatuses] = useState([]);
 
   const budgetRanges = [
-    { label: 'Under ₹1 Lakh', value: '0-100000' },
-    { label: '₹1 Lakh - ₹10 Lakh', value: '100000-1000000' },
-    { label: '₹10 Lakh - ₹1 Crore', value: '1000000-10000000' },
-    { label: '₹1 Crore - ₹10 Crore', value: '10000000-100000000' },
-    { label: 'Above ₹10 Crore', value: '100000000-999999999' }
+    { label: 'All Budgets', value: 'all' },
+    { label: 'Under ₹10 Lakh', value: 'low' },
+    { label: '₹10 Lakh - ₹1 Crore', value: 'medium' },
+    { label: '₹1 Crore - ₹10 Crore', value: 'high' },
+    { label: 'Above ₹10 Crore', value: 'very-high' }
   ];
 
+  const dateRanges = [
+    { label: 'All Time', value: 'all' },
+    { label: 'Last Month', value: 'last-month' },
+    { label: 'Last 3 Months', value: 'last-3-months' },
+    { label: 'Last 6 Months', value: 'last-6-months' },
+    { label: 'Last Year', value: 'last-year' }
+  ];
+
+  // Extract unique departments and statuses from projects
+  useEffect(() => {
+    if (projects.length > 0) {
+      const uniqueDepartments = [...new Set(projects.map(p => p.department).filter(Boolean))];
+      const uniqueStatuses = [...new Set(projects.map(p => p.status).filter(Boolean))];
+      
+      setDepartments(uniqueDepartments);
+      setStatuses(uniqueStatuses);
+    }
+  }, [projects]);
+
   const handleFilterChange = (filterType, value) => {
-    onFiltersChange({ [filterType]: value });
+    onFiltersChange(prev => ({ ...prev, [filterType]: value }));
   };
 
   const clearFilters = () => {
     onFiltersChange({
-      wardNumber: '',
-      department: '',
-      status: '',
-      budgetRange: ''
+      status: 'all',
+      department: 'all',
+      budgetRange: 'all',
+      dateRange: 'all',
+      searchQuery: ''
     });
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6 w-80 max-h-96 overflow-y-auto">
+    <div className="bg-white rounded-lg shadow-lg p-6 w-full">
       <div className="flex justify-between items-center mb-4">
-        <h3 className="text-lg font-bold text-gray-900">Filter Projects</h3>
-        <button
-          onClick={onClose}
-          className="text-gray-500 hover:text-gray-700"
-        >
-          <X className="h-5 w-5" />
-        </button>
+        <h3 className="text-lg font-bold text-gray-900 flex items-center">
+          <Filter className="h-5 w-5 mr-2" />
+          Filter Projects
+        </h3>
       </div>
 
-      {/* Ward Filter */}
+      {/* Search Query */}
       <div className="mb-4">
         <label className="flex items-center text-sm font-medium text-gray-700 mb-2">
-          <MapPin className="h-4 w-4 mr-2" />
-          BBMP Ward
+          <Search className="h-4 w-4 mr-2" />
+          Search Projects
+        </label>
+        <input
+          type="text"
+          value={filters.searchQuery || ''}
+          onChange={(e) => handleFilterChange('searchQuery', e.target.value)}
+          placeholder="Search by name, description, contractor..."
+          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        />
+      </div>
+
+      {/* Status Filter */}
+      <div className="mb-4">
+        <label className="text-sm font-medium text-gray-700 mb-2 block">
+          Project Status
         </label>
         <select
-          value={filters.wardNumber}
-          onChange={(e) => handleFilterChange('wardNumber', e.target.value)}
+          value={filters.status || 'all'}
+          onChange={(e) => handleFilterChange('status', e.target.value)}
           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         >
-          <option value="">All Wards</option>
-          {bengaluruWards.map((ward) => (
-            <option key={ward} value={ward}>
-              {ward}
+          <option value="all">All Statuses</option>
+          {statuses.map((status) => (
+            <option key={status} value={status}>
+              {status}
             </option>
           ))}
         </select>
@@ -96,33 +124,14 @@ const FilterPanel = ({ filters, onFiltersChange, onClose }) => {
           Department
         </label>
         <select
-          value={filters.department}
+          value={filters.department || 'all'}
           onChange={(e) => handleFilterChange('department', e.target.value)}
           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         >
-          <option value="">All Departments</option>
+          <option value="all">All Departments</option>
           {departments.map((dept) => (
             <option key={dept} value={dept}>
               {dept}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      {/* Status Filter */}
-      <div className="mb-4">
-        <label className="text-sm font-medium text-gray-700 mb-2 block">
-          Status
-        </label>
-        <select
-          value={filters.status}
-          onChange={(e) => handleFilterChange('status', e.target.value)}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-        >
-          <option value="">All Statuses</option>
-          {statuses.map((status) => (
-            <option key={status} value={status}>
-              {status}
             </option>
           ))}
         </select>
@@ -135,12 +144,30 @@ const FilterPanel = ({ filters, onFiltersChange, onClose }) => {
           Budget Range
         </label>
         <select
-          value={filters.budgetRange}
+          value={filters.budgetRange || 'all'}
           onChange={(e) => handleFilterChange('budgetRange', e.target.value)}
           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         >
-          <option value="">All Budgets</option>
           {budgetRanges.map((range) => (
+            <option key={range.value} value={range.value}>
+              {range.label}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {/* Date Range Filter */}
+      <div className="mb-4">
+        <label className="flex items-center text-sm font-medium text-gray-700 mb-2">
+          <Calendar className="h-4 w-4 mr-2" />
+          Date Range
+        </label>
+        <select
+          value={filters.dateRange || 'all'}
+          onChange={(e) => handleFilterChange('dateRange', e.target.value)}
+          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        >
+          {dateRanges.map((range) => (
             <option key={range.value} value={range.value}>
               {range.label}
             </option>
